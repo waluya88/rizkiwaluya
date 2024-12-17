@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "ariel", sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+/* Pink muda ke biru lembut */
+
+    animation: gradientAnimation 12s ease infinite;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+    margin-top: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-text {
+    margin-bottom: 15px;
+}
+
+.input-text input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}  
+
+.remember-me {
+    font-size: 1em
+}
+   
+.btn {
+    width: 240px;
+    background-color: rgb(95, 95, 245);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    color: white;
+}
+
+
+
+.btn:hover {
+    background-color:rgb(76, 76, 245) ;
+    transition: all ease-in-out .2s;
+}

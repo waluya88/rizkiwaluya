@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Menyertakan Font Awesome untuk ikon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Users</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="dashboard">
+                <h1>Dashboard</h1>
+                <div class="stats">
+                    <div class="stat-card1">
+                        <i class="fas fa-edit"></i> <!-- Ikon posting -->
+                        <h3>Jumlah Postingan</h3>
+                        <p id="total-posts">10</p>
+                    </div>
+                    <div class="stat-card2">
+                        <i class="fas fa-comments"></i> <!-- Ikon komentar -->
+                        <h3>Jumlah Komentar</h3>
+                        <p id="total-comments">25</p>
+                    </div>
+                    <div class="stat-card3">
+                        <i class="fas fa-eye"></i> <!-- Ikon pengunjung -->
+                        <h3>Jumlah Pengunjung</h3>
+                        <p id="total-visitors">200</p>
+                    </div>
+                    <div class="stat-card4">
+                        <i class="fas fa-users"></i> <!-- Ikon pengguna -->
+                        <h3>Jumlah Pengguna Terdaftar</h3>
+                        <p id="total-users">50</p>
+                    </div>
+                </div>
+
+                <!-- Form untuk menambah postingan -->
+                <div class="actions">
+                    <h2>Tambah Postingan Baru</h2>
+                    <form id="post-form">
+                        <input type="text" id="post-title" placeholder="Judul Postingan">
+                        <textarea id="post-content" placeholder="Isi Postingan"></textarea>
+                        <button id="add-post-btn">Tambah Postingan</button>
+                    </form>
+
+                    <!-- Daftar postingan -->
+                    <h2>Daftar Postingan</h2>
+                    <div id="post-list">
+                        <ul>
+                            <li>
+                                <strong>Judul Postingan 1</strong>
+                                <button>Edit</button>
+                            </li>
+                            <li>
+                                <strong>Judul Postingan 2</strong>
+                                <button>Edit</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

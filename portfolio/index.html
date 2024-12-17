@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki Waluya Ramadhan - Web Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .project-hover:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-normal tracking-normal">
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Rizki Waluya Ramadhan</div>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition duration-300">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-600 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <section id="home" class="text-center py-20">
+            <h1 class="text-5xl font-bold mb-4 text-blue-700">Welcome to My Portfolio</h1>
+            <p class="text-xl text-gray-600">I'm a passionate web developer creating innovative digital solutions</p>
+        </section>
+
+        <section id="about" class="bg-white shadow-md rounded-lg p-8 mb-10">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600">About Me</h2>
+            <div class="flex items-center">
+                <div class="w-1/2 pr-8">
+                    <p class="text-gray-700 leading-relaxed">
+                        Hi! I'm Rizki Waluya Ramadhan, a dedicated web developer with a passion for creating dynamic and responsive websites. 
+                        I specialize in turning complex problems into simple, beautiful interface designs. My goal is to continuously learn 
+                        and push the boundaries of web development.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <div class="bg-gray-200 rounded-lg p-4">
+                        <h3 class="text-xl font-semibold mb-4">Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-10">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600">My Projects</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-4 text-left">Project Name</th>
+                            <th class="p-4 text-left">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b project-hover">
+                            <td class="p-4">Form Login</td>
+                            <td class="p-4"><a href="Tugas form login/login.html" target="_blank" class="text-blue-600 hover:underline">View Project</a></td>
+                        </tr>
+                        <tr class="border-b project-hover">
+                            <td class="p-4">Calculator</td>
+                            <td class="p-4"><a href="tugas kalkulator/kalku.html" target="_blank" class="text-blue-600 hover:underline">View Project</a></td>
+                        </tr>
+                        <tr class="border-b project-hover">
+                            <td class="p-4">Dashboard Admin</td>
+                            <td class="p-4"><a href="tugas dashboard/dashboard.html" target="_blank" class="text-blue-600 hover:underline">View Project</a></td>
+                        </tr>
+                        <tr class="border-b project-hover">
+                            <td class="p-4">Game Tetris</td>
+                            <td class="p-4"><a href="game tetris/tetris.html" target="_blank" class="text-blue-600 hover:underline">View Project</a></td>
+                        </tr>
+                        <tr class="border-b project-hover">
+                            <td class="p-4">Diagram</td>
+                            <td class="p-4"><a href="diagram/diagram.html" target="_blank" class="text-blue-600 hover:underline">View Project</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="certificates" class="mb-10">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600">Certificates</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">HTML Certificate</h3>
+                    <a href="https://www.sololearn.com/certificates/CC-33RK2RLO" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">CSS Certificate</h3>
+                    <a href="https://www.sololearn.com/certificates/CC-LXM9TVXG" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">JavaScript Certificate</h3>
+                    <a href="https://www.sololearn.com/certificates/CC-1YLFBQQ8" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">JavaScript Intermediate Certificate</h3>
+                    <a href="https://www.sololearn.com/certificates/CC-BJVNLZ7O" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white shadow-md rounded-lg p-8">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600">Contact Me</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block mb-2">Name</label>
+                    <input type="text" class="w-full px-3 py-2 border rounded-md" placeholder="Your Name">
+                </div>
+                <div>
+                    <label class="block mb-2">Email</label>
+                    <input type="email" class="w-full px-3 py-2 border rounded-md" placeholder="Your Email">
+                </div>
+                <div>
+                    <label class="block mb-2">Message</label>
+                    <textarea class="w-full px-3 py-2 border rounded-md" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Rizki Waluya Ramadhan. All Rights Reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-400">LinkedIn</a>
+                <a href="#" class="hover:text-blue-400">GitHub</a>
+                <a href="#" class="hover:text-blue-400">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

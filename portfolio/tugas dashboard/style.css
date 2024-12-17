@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #212529; /* Sidebar abu-abu lebih gelap */
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.sidebar ul li a:hover {
+    display: block;
+    background-color: #007bff;
+}
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+}
+
+.dashboard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Card akan ter-wrap di layar kecil */
+}
+
+.stat-card1 {
+    width: 23%;
+    background-color: #e83939; /* Card warna abu-abu biru */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card2 {
+    width: 23%;
+    background-color: #10d566; /* Card warna abu-abu biru */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card3 {
+    width: 23%;
+    background-color: #005dd7; /* Card warna abu-abu biru */
+    color: white;  
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card4 {
+    width: 23%;
+    background-color: #adc12c; /* Card warna abu-abu biru */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card1:hover {
+    transform: translateY(-10px); /* Card naik sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.stat-card2:hover {
+    transform: translateY(-10px); /* Card naik sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.stat-card3:hover {
+    transform: translateY(-10px); /* Card naik sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.stat-card4:hover {
+    transform: translateY(-10px); /* Card naik sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.stat-card h3 {
+    margin: 10px 0;
+}
+
+.stat-card p {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.stat-card i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #00bcd4; /* Warna ikon */
+}
+
+.actions {
+    margin-top: 40px;
+}
+
+#post-form input, #post-form textarea, #post-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#add-post-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#add-post-btn:hover {
+    background-color: #0056b3;
+}
+
+#post-list ul {
+    list-style-type: none;
+}
+
+#post-list li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    color: black;
+}
+
+#post-list li button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#post-list li button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        width: 48%; /* Ukuran card di layar sedang */
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-card {
+        width: 100%; /* Ukuran card di layar kecil */
+    }
+}
