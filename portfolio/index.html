@@ -13,6 +13,34 @@
             transform: scale(1.02);
             transition: transform 0.3s ease;
         }
+        .filter-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filter-buttons button.active {
+            background-color: #0056b3;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans leading-normal tracking-normal">
@@ -23,6 +51,7 @@
                 <li><a href="#home" class="hover:text-blue-600 transition duration-300">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-600 transition duration-300">About</a></li>
                 <li><a href="#projects" class="hover:text-blue-600 transition duration-300">Projects</a></li>
+                <li><a href="#gallery" class="hover:text-blue-600 transition duration-300">Gallery</a></li>
                 <li><a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a></li>
             </ul>
         </nav>
@@ -99,47 +128,76 @@
             </div>
         </section>
 
-        <section id="certificates" class="mb-10">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600">Certificates</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-4">HTML Certificate</h3>
-                    <a href="https://www.sololearn.com/certificates/CC-33RK2RLO" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+        <section id="gallery" class="mb-10">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600">Gallery</h2>
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">Semua</button>
+                <button data-filter="ilustrasi">Ilustrasi</button>
+                <button data-filter="desain-grafis">Desain Grafis</button>
+                <button data-filter="fotografi">Fotografi</button>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item" data-category="ilustrasi">
+                    <img src="ilustrasi1.jpg" alt="Ilustrasi 1">
+                    <p>Ilustrasi 1</p>
                 </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-4">CSS Certificate</h3>
-                    <a href="https://www.sololearn.com/certificates/CC-LXM9TVXG" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                <div class="gallery-item" data-category="desain-grafis">
+                    <img src="desain1.jpg" alt="Desain Grafis 1">
+                    <p>Desain Grafis 1</p>
                 </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-4">JavaScript Certificate</h3>
-                    <a href="https://www.sololearn.com/certificates/CC-1YLFBQQ8" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                <div class="gallery-item" data-category="fotografi">
+                    <img src="fotografi2.jpg" alt="Fotografi 1">
+                    <p>Fotografi 1</p>
                 </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-4">JavaScript Intermediate Certificate</h3>
-                    <a href="https://www.sololearn.com/certificates/CC-BJVNLZ7O" target="_blank" class="text-blue-600 hover:underline">View Certificate</a>
+                <div class="gallery-item" data-category="ilustrasi">
+                    <img src="ilustrasi2.jpg" alt="Ilustrasi 2">
+                    <p>Ilustrasi 2</p>
+                </div>
+                <div class="gallery-item" data-category="desain-grafis">
+                    <img src="desain2.jpg" alt="Desain Grafis 2">
+                    <p>Desain Grafis 2</p>
+                </div>
+                <div class="gallery-item" data-category="fotografi">
+                    <img src="fotografi1.jpg" alt="Fotografi 2">
+                    <p>Fotografi 2</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="bg-white shadow-md rounded-lg p-8">
             <h2 class="text-3xl font-semibold mb-6 text-blue-600">Contact Me</h2>
-            <form class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <form class="space-y-4">
+                    <div>
+                        <label class="block mb-2">Name</label>
+                        <input type="text" class="w-full px-3 py-2 border rounded-md" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block mb-2">Email</label>
+                        <input type="email" class="w-full px-3 py-2 border rounded-md" placeholder="Your Email">
+                    </div>
+                    <div>
+                        <label class="block mb-2">Message</label>
+                        <textarea class="w-full px-3 py-2 border rounded-md" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
                 <div>
-                    <label class="block mb-2">Name</label>
-                    <input type="text" class="w-full px-3 py-2 border rounded-md" placeholder="Your Name">
+                    <h3 class="text-xl font-semibold mb-4">Our Location</h3>
+                    <div class="overflow-hidden rounded-lg shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3686724091485!2d106.6889576759154!3d-6.34628256209161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5a6e26dc3cd%3A0xccd6344b8021119d!2sPamulang%20University%20Campus%202%20(UNPAM%20Viktor)!5e0!3m2!1sen!2sid!4v1736130263056!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-                <div>
-                    <label class="block mb-2">Email</label>
-                    <input type="email" class="w-full px-3 py-2 border rounded-md" placeholder="Your Email">
-                </div>
-                <div>
-                    <label class="block mb-2">Message</label>
-                    <textarea class="w-full px-3 py-2 border rounded-md" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
-                    Send Message
-                </button>
-            </form>
+            </div>
         </section>
     </main>
 
@@ -153,5 +211,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // JavaScript untuk filter galeri
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-buttons button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Hapus kelas 'active' dari semua tombol
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Tambahkan kelas 'active' ke tombol yang diklik
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        // Tampilkan semua item jika filter adalah 'all'
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
